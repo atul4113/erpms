@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post jobs</title>
+</head>
+<body>
+<h1 align="center">Post Jobs here</h1>
+<table align="center">
+    <tr>
+        <td><a href="/index/">Home | </a> </td>
+        <td><a href="/comp_login/">Comp Login | </a> </td>
+        <td><a href="/comp_registration/">Comp Registration | </a> </td>
+        <td><a href="/comp_dashboard/">Comp Dashboard | </a> </td>
+        <td><a href="/comp_post_jobs/">Post Jobs | </a> </td>
+        <td><a href="/comp_view_jobs/">View Jobs | </a> </td>
+        <td><a href="/comp_edit_jobs/">Edit Jobs | </a> </td>
+        <td><a href="/comp_delete_jobs/">Delete Jobs | </a> </td>
+    </tr>
+</table>
+<p align="center">{{ jobs }}</p>
+<form action="/comp_post_jobs/" method="post">
+    <table align="center">
+        <tr>
+            <td>Job Title : </td>
+            <td><input type="text" name="job_title" maxlength="40" placeholder="Job title" required></td>
+        </tr>
+        <tr>
+            <td>Job Type :</td>
+            <td>
+                <select name="job_type">Job Type :
+                    <option name="job_type" value="full time" required>Full Time</option>
+                    <option name="job_type" value="part time">Part Time</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Job Details :</td>
+            <td><textarea name="job_detail" placeholder="Job details upto 2000 words" maxlength="2000" required></textarea></td>
+        </tr>
+        <tr>
+            <td>Job Tags :</td>
+            <td><input type="text" name="tags" placeholder="seperate tags using ',' "></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

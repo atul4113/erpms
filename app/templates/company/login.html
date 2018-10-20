@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+<h1 align="center">Company Login Page</h1>
+<table align="center">
+    <tr>
+        <td><a href="/index/">Home | </a> </td>
+        <td><a href="/comp_login/">Comp Login | </a> </td>
+        <td><a href="/comp_registration/">Comp Registration | </a> </td>
+        <td><a href="/comp_dashboard/">Comp Dashboard | </a> </td>
+        <td><a href="/comp_post_jobs/">Post Jobs | </a> </td>
+        <td><a href="/comp_view_jobs/">View Jobs | </a> </td>
+        <td><a href="/comp_edit_jobs/">Edit Jobs | </a> </td>
+        <td><a href="/comp_delete_jobs/">Delete Jobs | </a> </td>
+    </tr>
+</table>
+<form action="/comp_dashboard/" method="post">
+    <table align="center">
+        <tr>
+            <td>Email Id :</td>
+            <td><input type="email" name="comp_email"></td>
+        </tr><tr>
+            <td>Password :</td>
+            <td><input type="password" name="comp_password"></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2"><input type="submit" value="Login"></td>
+        </tr>
+    </table>
+</form>
+
+<p align="center">{{ msg }}</p>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+<h1 align="center">Admin Dashboard</h1>
+<table align="center">
+    <tr>
+        <td><a href="/login/">Login | </a> </td>
+        <td><a href="/register/">Registration | </a> </td>
+        <td><a href="/delete/">Delete | </a> </td>
+        <td><a href="/view_all_company/">View Comp | </a> </td>
+        <td><a href="/view_all_jobseeker/">View JS | </a> </td>
+        <td><a href="/view_all_jobs/">View Jobs | </a> </td>
+    </tr>
+</table>
+<h2 align="center">Login As</h2>
+<table align="center" border="1">
+    <tr>
+        <th>User : </th>
+        {% for x in login %}
+        <td>{{ x.ausr }}</td>
+        {% endfor %}
+    </tr>
+</table>
+<h2 align="center">Company List</h2>
+<table align="center" border="1">
+    <tr>
+        <th>Comp ID</th>
+        <th>Comp Name</th>
+        <th>Comp Email</th>
+        <th>Comp Contact</th>
+        <th>Comp Password</th>
+        <th>Comp Address</th>
+    </tr>
+    {% for x in comp %}
+    <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.c_name }}</td>
+        <td>{{ x.c_email }}</td>
+        <td>{{ x.c_contact }}</td>
+        <td>{{ x.c_pw }}</td>
+        <td>{{ x.c_address }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h2 align="center">JobSeeker List</h2>
+<table align="center" border="1">
+    <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Password</th>
+        <th>Education</th>
+        <th>Location</th>
+    </tr>
+    {% for y in js %}
+    <tr>
+        <td>{{ y.id }}</td>
+        <td>{{ y.name_js }}</td>
+        <td>{{ y.email }}</td>
+        <td>{{ y.mobile }}</td>
+        <td>{{ y.password }}</td>
+        <td>{{ y.education }}</td>
+        <td>{{ y.location }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h2 align="center">Jobs List</h2>
+<table align="center" border="1">
+    <tr>
+        <th>Job ID</th>
+        <th>Title</th>
+        <th>Type</th>
+        <th>Details</th>
+    </tr>
+    {% for z in jobs %}
+    <tr>
+        <td>{{ z.id }}</td>
+        <td>{{ z.job_title }}</td>
+        <td>{{ z.job_type }}</td>
+        <td>{{ z.job_detail }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h2 align="center">Registered Student List for Exam</h2>
+<table align="center" border="1">
+    <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Exams</th>
+    </tr>
+    {% for exam in exam %}
+    <tr>
+        <td>{{ exam.id }}</td>
+        <td>{{ exam.e_name }}</td>
+        <td>{{ exam.e_email }}</td>
+        <td>{{ exam.e_mobile }}</td>
+        <td>{{ exam.e_exams }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

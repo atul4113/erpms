@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Exam Registration</title>
+</head>
+<body>
+<h1 align="center">Online Exam Registration</h1>
+<table align="center">
+    <tr>
+        <td><a href="/index/">Home | </a> </td>
+        <td><a href="/js_login/">Login | </a> </td>
+        <td><a href="/js_register/">Registration | </a> </td>
+        <td><a href="/js_dashboard/">Dashboard | </a> </td>
+        <td><a href="/js_view_jobs/">View Jobs | </a> </td>
+        <td><a href="/js_online_exam_registration/">Online Exam Registration</a> </td>
+    </tr>
+</table>
+<p align="center">Use your existing details to register for online exams</p>
+<form action="/js_online_exam_registration/" method="get">
+    <table align="center">
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="js_email" placeholder="Your Registered Email"></td>
+            <td><input type="submit" value="Show Details"></td>
+        </tr>
+    </table>
+</form>
+<p align="center">Check All Details Before Registration</p>
+<form action="/js_online_exam_registration/" method="post">
+    {% for x in res %}
+        <table align="center">
+            <tr>
+                <td>Name : </td>
+                <td><input type="text" name="js_name" maxlength="25" value="{{ x.name_js }}"></td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input type="email" name="js_email" maxlength="25" value="{{ x.email }}"></td>
+            </tr>
+            <tr>
+                <td>Mobile No : </td>
+                <td><input type="tel" name="js_mobile" value="{{ x.mobile }}"></td>
+            </tr>
+            <tr>
+                <td>Select Exams  : </td>
+                <td><input type="checkbox" name="exams" value="python">Python
+                    <input type="checkbox" name="exams" value="JAVA">JAVA
+                    <input type="checkbox" name="exams" value="C++">C++</td>
+                <td><input type="checkbox" name="exams" value="Django">Django</td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2"><input type="submit" value="Register"></td>
+            </tr>
+        </table>
+    {% endfor %}
+</form>
+<p align="center">{{ msg }}</p>
+</body>
+</html>

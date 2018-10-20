@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login For job Seeker</title>
+</head>
+<body>
+<h1 align="center">Login Page</h1>
+<table align="center">
+    <tr>
+        <td><a href="/index/">Home | </a> </td>
+        <td><a href="/js_login/">Login | </a> </td>
+        <td><a href="/js_register/">Registration | </a> </td>
+        <td><a href="/js_dashboard/">Dashboard | </a> </td>
+        <td><a href="/js_view_jobs/">View Jobs | </a> </td>
+        <td><a href="/js_online_exam_registration/">Online Exam Registration</a> </td>
+    </tr>
+</table>
+<form action="/js_dashboard/" method="post">
+    <table align="center">
+        <tr>
+            <td>Email Id :</td>
+            <td><input type="email" name="js_email"></td>
+        </tr><tr>
+            <td>Password :</td>
+            <td><input type="password" name="js_password"></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2"><input type="submit" value="Login"></td>
+        </tr>
+    </table>
+</form>
+
+<p align="center">{{ msg }}</p>
+</body>
+</html>

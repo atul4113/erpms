@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile Page</title>
+</head>
+<body>
+<h1 align="center">My Dashboard Page</h1>
+<table align="center">
+    <tr>
+        <td><a href="/index/">Home | </a> </td>
+        <td><a href="/js_login/">Login | </a> </td>
+        <td><a href="/js_register/">Registration | </a> </td>
+        <td><a href="/js_dashboard/">Dashboard | </a> </td>
+        <td><a href="/js_view_jobs/">View Jobs | </a> </td>
+        <td><a href="/js_online_exam_registration/">Online Exam Registration</a> </td>
+    </tr>
+</table>
+<p align="center">{{ msg }}</p>
+<form action="/js_profile_edit/" method="get">
+    {% for x in login %}
+        <table align="center">
+            <tr>
+                <td>{{ x.profile }}</td>
+            </tr><tr>
+                <td>Name : </td>
+                <td>{{ x.name_js }}</td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input type="email" hidden name="js_email" value="{{ x.email }}">{{ x.email }}</td>
+            </tr>
+            <tr>
+                <td>Mobile No : </td>
+                <td>{{ x.mobile }}</td>
+            </tr>
+            <tr>
+                <td>Password : </td>
+                <td>{{ x.password }}</td>
+            </tr>
+            <tr>
+                <td>Education : </td>
+                <td>{{ x.education }}</td>
+            </tr>
+            <tr>
+                <td>Skils : </td>
+                <td>{{ x.skills }}</td>
+            </tr>
+            <tr>
+                <td>Current Location : </td>
+                <td>{{ x.location }}</td>
+            </tr>
+            <tr>
+                <td>Resume : </td>
+                <td>{{ x.resume }}</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Update Profile"></td>
+            </tr>
+        </table>
+    {% endfor %}
+</form>
+</body>
+</html>

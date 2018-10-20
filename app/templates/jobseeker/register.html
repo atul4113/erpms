@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Seeker Registration Page</title>
+</head>
+<body>
+<h1 align="center">Registration Page</h1>
+<table align="center">
+    <tr>
+        <td><a href="/index/">Home | </a> </td>
+        <td><a href="/js_login/">Login | </a> </td>
+        <td><a href="/js_register/">Registration | </a> </td>
+        <td><a href="/js_dashboard/">Dashboard | </a> </td>
+        <td><a href="/js_view_jobs/">View Jobs | </a> </td>
+        <td><a href="/js_online_exam_registration/">Online Exam Registration</a> </td>
+    </tr>
+</table>
+<form action="/js_register/" method="post">
+<table align="center">
+    <tr>
+        <td>Name : </td>
+        <td><input type="text" name="js_name" maxlength="25" required></td>
+    </tr>
+    <tr>
+        <td>Email : </td>
+        <td><input type="email" name="js_email" maxlength="25" required></td>
+    </tr>
+    <tr>
+        <td>Mobile No : </td>
+        <td><input type="tel" name="js_mobile" required></td>
+    </tr>
+    <tr>
+        <td>Password : </td>
+        <td><input type="password" name="js_password" maxlength="25" required></td>
+    </tr>
+    <tr>
+        <td>Education : </td>
+        <td><input type="text" name="js_education" maxlength="60" required></td>
+    </tr>
+    <tr>
+        <td>Skils : </td>
+        <td><input type="text" name="js_skills" maxlength="60" required></td>
+    </tr>
+    <tr>
+        <td>Current Location : </td>
+        <td><input type="text" name="js_location" maxlength="60" required></td>
+    </tr>
+    <tr>
+        <td>Upload Resume : </td>
+        <td><input type="file" name="js_resume" required></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="radio">I agreed to the Terms and Condition.</td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2"><input type="submit" value="Register"></td>
+    </tr>
+</table>
+</form>
+<p align="center">{{ msg }}</p>
+</body>
+</html>

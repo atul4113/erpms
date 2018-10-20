@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Registration Page</title>
+</head>
+<body>
+<h1 align="center">Admin Registration Page</h1>
+<table align="center">
+    <tr>
+        <td><a href="/login/">Login | </a> </td>
+        <td><a href="/register/">Registration | </a> </td>
+        <td><a href="/delete/">Delete | </a> </td>
+        <td><a href="/view_all_company/">View Comp | </a> </td>
+        <td><a href="/view_all_jobseeker/">View JS | </a> </td>
+        <td><a href="/view_all_jobs/">View Jobs | </a> </td>
+    </tr>
+</table>
+<form action="/register/" method="post">
+    <table align="center">
+        <tr>
+            <td>User Id :</td>
+            <td><input type="text" name="usr" required></td>
+        </tr>
+        <tr>
+            <td>Password :</td>
+            <td><input type="password" name="pw" required></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Register"></td>
+        </tr>
+    </table>
+</form>
+<p align="center">{{ msg }}</p>
+</body>
+</html>

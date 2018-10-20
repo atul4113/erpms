@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View All Jobs </title>
+</head>
+<body>
+<h1 align="center">View Jobs </h1>
+<table align="center">
+    <tr>
+        <td><a href="/index/">Home | </a> </td>
+        <td><a href="/js_login/">Login | </a> </td>
+        <td><a href="/js_register/">Registration | </a> </td>
+        <td><a href="/js_dashboard/">Dashboard | </a> </td>
+        <td><a href="/js_view_jobs/">View Jobs | </a> </td>
+        <td><a href="/js_online_exam_registration/">Online Exam Registration</a> </td>
+    </tr>
+</table>
+{% for x in jobs %}
+<table align="center">
+    <tr>
+        <td>Job Id : </td>
+        <td>{{ x.id }}</td>
+    </tr>
+    <tr>
+        <td>Job Title : </td>
+        <td>{{ x.job_title }}</td>
+    </tr>
+    <tr>
+        <td>Job Type :</td>
+        <td>{{ x.job_type }}</td>
+    </tr>
+    <tr>
+        <td>Job Details :</td>
+        <td>{{ x.job_detail }}</td>
+    </tr>
+    <tr>
+        <td>Job Tags :</td>
+        <td>{{ x.job_tags }}</td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2"><input type="submit" value="Apply"></td>
+    </tr>
+</table>
+{% endfor %}
+</body>
+</html>

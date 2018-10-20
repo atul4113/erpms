@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Dashboard</title>
+</head>
+<body>
+<h1 align="center">Company Dashboard</h1>
+<table align="center">
+    <tr>
+        <td><a href="/index/">Home | </a> </td>
+        <td><a href="/comp_login/">Comp Login | </a> </td>
+        <td><a href="/comp_registration/">Comp Registration | </a> </td>
+        <td><a href="/comp_dashboard/">Comp Dashboard | </a> </td>
+        <td><a href="/comp_post_jobs/">Post Jobs | </a> </td>
+        <td><a href="/comp_view_jobs/">View Jobs | </a> </td>
+        <td><a href="/comp_edit_jobs/">Edit Jobs | </a> </td>
+        <td><a href="/comp_delete_jobs/">Delete Jobs | </a> </td>
+    </tr>
+</table>
+<p align="center">{{ msg }}</p>
+<form action="/comp_profile_edit/" method="get">
+    {% for x in login %}
+        <table align="center">
+            <tr>
+                <td>Name : </td>
+                <td>{{ x.c_name }}</td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input type="email" hidden name="comp_email" value="{{ x.c_email }}">{{ x.c_email }}</td>
+            </tr>
+            <tr>
+                <td>Contact No : </td>
+                <td>{{ x.c_contact }}</td>
+            </tr>
+            <tr>
+                <td>Password : </td>
+                <td>{{ x.c_pw }}</td>
+            </tr>
+            <tr>
+                <td>Address : </td>
+                <td>{{ x.c_address }}</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Update Profile"></td>
+            </tr>
+        </table>
+    {% endfor %}
+</form>
+
+</body>
+</html>
